@@ -1,0 +1,20 @@
+{
+  "workspace": {
+    "name": "RealtimeBusTracker",
+    "settings": {
+      "editor": {
+        "fontSize": 14,
+        "tabSize": 2,
+        "insertSpaces": true,
+        "wordWrap": "on"
+      },
+      "terminal": {
+        "integrated": {
+          "shell": {
+            "windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe"
+          }
+        }
+      }
+    }
+  }
+} 
