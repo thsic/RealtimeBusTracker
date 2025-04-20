@@ -1,0 +1,244 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #f8f8f8; /* 明るいグレー */
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; /* ヘッダーを固定 */
+    top: 0;
+    z-index: 100;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.4em; /* 少し大きめに */
+    flex-grow: 1;
+    text-align: center;
+}
+
+.nav-button,
+.icon-button {
+    background: none;
+    border: none;
+    font-size: 1.5em; /* アイコンサイズ調整 */
+    cursor: pointer;
+    padding: 0.2em;
+    color: #555;
+}
+
+.header-icons {
+    display: flex;
+    gap: 0.5em; /* アイコン間のスペース */
+}
+
+.favorite-button {
+    color: #f0ad4e; /* 星の色 (オレンジ系) */
+}
+
+/* --- 表示中バス停ナビゲーション --- */
+.current-stop-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: #eee; /* 少し濃いグレー */
+    border-bottom: 1px solid #ccc;
+}
+
+.current-stop-nav button {
+    background: none;
+    border: 1px solid #ccc;
+    padding: 0.3em 0.6em;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9em;
+}
+
+.current-stop-nav .current-stop-name {
+    font-weight: bold;
+}
+
+/* --- メインコンテンツ --- */
+main {
+    padding: 1em;
+}
+
+section {
+    margin-bottom: 1.5em;
+}
+
+section h2 {
+    margin-top: 0;
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+    border-bottom: 2px solid #007bff; /* 青系のアクセント */
+    padding-bottom: 0.3em;
+    color: #007bff;
+}
+
+/* --- リアルタイム情報カード --- */
+.realtime-info .bus-info-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    padding: 0.8em;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.bus-info-card > div {
+    margin-bottom: 0.6em;
+}
+.bus-info-card > div:last-child {
+    margin-bottom: 0;
+}
+
+.time-info {
+    display: flex;
+    gap: 1.5em; /* 時刻間のスペース */
+}
+
+.time-info > div {
+    border: 1px dashed #ccc; /* Draw.ioの破線 */
+    padding: 0.3em 0.5em;
+    text-align: center;
+}
+
+.time-info .label {
+    font-size: 0.8em;
+    color: #666;
+    display: block;
+}
+
+.time-info .time {
+    font-size: 1.4em; /* 時刻を大きく */
+    font-weight: bold;
+    display: block;
+}
+
+.time-info .delay {
+    font-size: 0.8em;
+    color: red;
+    margin-left: 0.3em;
+}
+
+.destination-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    border: 1px dashed #ccc;
+    padding: 0.5em;
+}
+
+.destination-info .destination {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.destination-info .remaining-time {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #007bff; /* 残り時間を強調 */
+}
+
+.status-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9em;
+    border: 1px dashed #ccc;
+    padding: 0.4em 0.5em;
+}
+
+.location-info {
+    font-size: 0.9em;
+    color: #555;
+    border: 1px dashed #ccc;
+    padding: 0.4em 0.5em;
+}
+
+/* --- 過去の運行データ --- */
+.past-data table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    overflow-x: auto; /* 横スクロール可能に */
+    display: block; /* 横スクロールのためにblock要素に */
+    white-space: nowrap; /* セル内での改行を防ぐ */
+}
+
+.past-data th,
+.past-data td {
+    border: 1px solid #ccc;
+    padding: 0.5em;
+    text-align: center;
+    vertical-align: middle; /* 縦中央揃え */
+}
+
+.past-data thead th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+    white-space: normal; /* ヘッダーは改行許可 */
+}
+
+.past-data tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+.past-data td:first-child,
+.past-data th:first-child {
+    text-align: left; /* 最初の列（バス停名）は左寄せ */
+}
+
+.scroll-indicator {
+    margin-top: 0.5em;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden; /* スクロールバーのはみ出し防止 */
+}
+
+.scroll-bar {
+    height: 100%;
+    width: 30%; /* テーブルの表示幅に応じてJSで変更想定 */
+    background-color: #aaa;
+    border-radius: 5px;
+}
+
+/* --- フッター --- */
+footer {
+    background-color: #f8f8f8;
+    padding: 0.5em 0;
+    border-top: 1px solid #ccc;
+    position: sticky; /* フッターも固定 */
+    bottom: 0;
+    z-index: 100;
+}
+
+footer nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+footer nav a {
+    text-decoration: none;
+    color: #555;
+    padding: 0.5em 1em;
+    flex-grow: 1; /* タップ領域を広げる */
+    text-align: center;
+}
+
+footer nav a.active {
+    font-weight: bold;
+    color: #007bff;
+} 

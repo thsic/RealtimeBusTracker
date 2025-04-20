@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バス停詳細画面</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <button class="nav-button">＜</button>
+        <h1>バス停 BBB</h1>
+        <div class="header-icons">
+            <button class="icon-button favorite-button">★</button>
+            <button class="icon-button settings-button">⚙</button>
+        </div>
+    </header>
+
+    <section class="current-stop-nav">
+        <button class="prev-stop">バス停A</button>
+        <span class="current-stop-name">BBBバス停</span>
+        <button class="next-stop">CCCCCCバ...</button>
+    </section>
+
+    <main>
+        <section class="realtime-info">
+            <h2>リアルタイム到着情報</h2>
+            <div class="bus-info-card">
+                <div class="time-info">
+                    <div class="scheduled-time">
+                        <span class="label">定刻</span>
+                        <span class="time">12:34</span>
+                    </div>
+                    <div class="estimated-time">
+                        <span class="label">到着予定</span>
+                        <span class="time">12:34</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <span class="destination">XXX(終点名)</span>
+                    <span class="remaining-time">あと12分</span>
+                </div>
+                <div class="status-info">
+                    <span class="route-name">AAバス 11系統</span>
+                    <span class="congestion">混雑度: 中</span>
+                </div>
+                <div class="location-info">
+                    <span class="last-passed">5分前に バス停YYYを通過</span>
+                </div>
+            </div>
+            <div class="bus-info-card">
+                <div class="time-info">
+                     <div class="scheduled-time">
+                        <span class="label">定刻</span>
+                        <span class="time">12:45</span>
+                    </div>
+                    <div class="estimated-time">
+                        <span class="label">到着予定</span>
+                        <span class="time">12:50</span>
+                        <span class="delay">(5分遅れ)</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <span class="destination">XXX(終点名)</span>
+                    <span class="remaining-time">あと12分</span>
+                </div>
+                 <div class="status-info">
+                    <span class="route-name">AAバス 11系統</span>
+                    <span class="congestion">混雑度: 低</span>
+                </div>
+                <div class="location-info">
+                    <span class="last-passed">10分前に バス停ZZZを通過</span>
+                </div>
+            </div>
+            <div class="bus-info-card">
+                 <div class="time-info">
+                     <div class="scheduled-time">
+                        <span class="label">定刻</span>
+                        <span class="time">13:10</span>
+                    </div>
+                </div>
+                <div class="destination-info">
+                    <span class="destination">XXX(終点名)</span>
+                    <span class="remaining-time">あとN分</span>
+                </div>
+                 <div class="status-info">
+                    <span class="route-name">BBバス 22系統</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="past-data">
+            <h2>過去の到着時刻</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>バス停</th>
+                        <th>定刻</th>
+                        <th>所要</th>
+                        <th>4/18(木)</th>
+                        <th>4/19(金)</th>
+                        <th>4/20(土)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>バス停BBB</td>
+                        <td>11:30</td>
+                        <td>N分</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (早着N分)</td>
+                    </tr>
+                     <tr>
+                        <td>バス停BBB</td>
+                        <td>12:10</td>
+                        <td>N分</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (早着N分)</td>
+                    </tr>
+                    <tr>
+                        <td>バス停BBB</td>
+                        <td>12:34</td>
+                        <td>1分/12分</td>
+                        <td>12:34 (遅延0分)</td>
+                        <td>12:40 (遅延11分)</td>
+                        <td>12:35 (遅延6分)</td>
+                    </tr>
+                     <tr>
+                        <td>バス停BBB</td>
+                        <td>12:45</td>
+                         <td>N分</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (早着N分)</td>
+                    </tr>
+                     <tr>
+                        <td>バス停BBB</td>
+                        <td>13:10</td>
+                        <td>N分</td>
+                         <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (遅延N分)</td>
+                        <td>XX:XX (早着N分)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="scroll-indicator">
+                 <div class="scroll-bar"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <nav>
+            <a href="../メイン画面/index.html">ホーム</a>
+            <a href="../設定画面/index.html">設定</a>
+        </nav>
+    </footer>
+</body>
+</html> 
